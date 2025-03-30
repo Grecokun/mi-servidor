@@ -13,6 +13,11 @@ app.get("/", (req, res) => {
     res.send("¡Servidor en línea!");
 });
 
+app.get("/api/saludo", (req, res) => {
+    res.json({ mensaje: "¡Hola desde la API!" });
+});
+
+
 // Iniciar servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
